@@ -1,0 +1,12 @@
+@if (selectedTodo.todo.id > -1) {
+<div class="modal">
+	<div class="modal-content">
+		<span class="close modal-btn" (click)="closeModal()">&#10005;</span>
+		<span class="complete modal-btn" (click)="submitTodo()">&#10004;</span>
+		<form [formGroup]="selectedTodo.todoForm" action="">
+			<input formControlName="title" class="todo-modal-info" [value]="selectedTodo.todo.title" type="text" name="" id="" />
+			<textarea formControlName="desc" class="todo-modal-info" [value]="selectedTodo.todo.description" name="" id=""></textarea>
+		</form>
+	</div>
+</div>
+}

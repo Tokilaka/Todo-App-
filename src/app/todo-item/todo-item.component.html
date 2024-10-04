@@ -1,0 +1,14 @@
+<h2>To do list</h2>
+<div class="todo-item-box">
+	@for (item of todoItems; track $index) {
+	<div class="todo-item">
+		<h2 [ngClass]="{ completed: item.completed }">{{ item.title }}</h2>
+		<div class="todo-item-box">
+			<button (click)="viewTodo($index)" class="view-btn">View</button>
+			<button (click)="removeTodoItem($index)" class="del-btn"><span>&#10005;</span></button>
+			<input (click)="completeTodo($index)" type="checkbox" name="" id="" [checked]="item.completed" />
+		</div>
+	</div>
+	}
+</div>
+<app-todo-item-popup></app-todo-item-popup>

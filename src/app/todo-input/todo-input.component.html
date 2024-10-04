@@ -1,0 +1,5 @@
+<form [formGroup]="todoForm" (submit)="submitTodo()">
+	<input formControlName="title" class="todo-input todo-input-title" placeholder="To do title" type="text" name="" id="" />
+	<textarea formControlName="desc" class="todo-input todo-input-desc" placeholder="To do description" name="" id=""></textarea>
+	<button class="todo-btn">Add</button>
+</form>
